@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="60" y1="20" x2="60" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer rounded triangle -->
+  <path d="M60 25 L90 80 C92 84 90 88 85 88 L35 88 C30 88 28 84 30 80 Z" 
+        fill="url(#iconGradient)" 
+        stroke="none"/>
+  
+  <!-- Inner triangle with rounded corners -->
+  <path d="M60 45 L75 70 C76 72 75 74 73 74 L47 74 C45 74 44 72 45 70 Z" 
+        fill="white" 
+        stroke="none"/>
+  
+  <!-- Bottom line detail -->
+  <rect x="48" y="68" width="24" height="6" rx="3" fill="white"/>
+</svg>
