@@ -4,6 +4,7 @@ import React from "react"
 import Image from "next/image"
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card"
 import { HeroBadge } from "@/components/ui/hero-badge"
+import ScrollStack, { ScrollStackItem } from "@/components/ui/ScrollStack"
 import {
   Zap,
   Settings2,
@@ -92,95 +93,106 @@ export function UseCasesSection() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-12 md:mt-24">
-          {useCases.map((uc) => {
-            return (
-              <Card
+        <div className="mt-14 md:mt-24">
+          <ScrollStack
+            className="bg-transparent [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            itemDistance={70}
+            itemScale={0.035}
+            itemStackDistance={26}
+            stackPosition="22%"
+            scaleEndPosition="10%"
+            baseScale={0.9}
+            useWindowScroll
+          >
+            {useCases.map((uc) => (
+              <ScrollStackItem
                 key={uc.id}
-                className="group relative flex h-full min-h-[380px] sm:min-h-[460px] flex-col border-zinc-700/40 bg-black/80 shadow-2xl shadow-purple-500/25 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2.5 hover:border-purple-400/90 hover:shadow-purple-400/60"
+                itemClassName="bg-transparent p-0 h-auto my-10 rounded-3xl shadow-none border-none"
               >
-                <CardHeader
-                  className={`flex h-full flex-col gap-10 md:flex-row md:items-stretch ${
-                    uc.id === "operations-automation" ? "md:flex-row-reverse" : ""
-                  }`}
-                >
-                  <div
-                    className={
-                      uc.id === "sales-engine" || uc.id === "autonomous-support" || uc.id === "operations-automation"
-                        ? "flex flex-1 md:max-w-[46%]"
-                        : "flex flex-1 flex-col items-center md:items-start md:max-w-[32%]"
-                    }
-                  >
-                    {uc.id === "sales-engine" ? (
-                      <div className="relative h-full w-full min-h-[260px] overflow-hidden rounded-3xl border border-white/15 bg-black/60 shadow-lg shadow-purple-500/25">
-                        <Image
-                          src="/usecase3.avif"
-                          alt="Automated Sales Engine use case"
-                          fill
-                          className="object-cover"
-                          sizes="256px"
-                        />
-                      </div>
-                    ) : uc.id === "autonomous-support" ? (
-                      <div className="relative h-full w-full min-h-[260px] overflow-hidden rounded-3xl border border-white/15 bg-black/60 shadow-lg shadow-purple-500/25">
-                        <Image
-                          src="/usecase1.avif"
-                          alt="Autonomous Customer Support use case"
-                          fill
-                          className="object-cover"
-                          sizes="256px"
-                        />
-                      </div>
-                    ) : uc.id === "operations-automation" ? (
-                      <div className="relative h-full w-full min-h-[260px] overflow-hidden rounded-3xl border border-white/15 bg-black/60 shadow-lg shadow-purple-500/25">
-                        <Image
-                          src="/usecase2.avif"
-                          alt="Smart Operations Automation use case"
-                          fill
-                          className="object-cover"
-                          sizes="256px"
-                        />
-                      </div>
-                    ) : (
-                      <CardDecorator />
-                    )}
-                  </div>
-
-                  <div
-                    className={`mt-4 flex-1 space-y-6 md:mt-0 md:max-w-[54%] py-9 sm:py-11 lg:py-14 pr-9 sm:pr-11 lg:pr-14 text-left ${
-                      uc.id === "operations-automation" ? "md:pl-8" : ""
+                <Card className="group relative flex h-full min-h-[380px] sm:min-h-[460px] flex-col bg-black/80 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2.5 hover:border-purple-400/90 hover:shadow-purple-400/60">
+                  <CardHeader
+                    className={`flex h-full flex-col gap-10 md:flex-row md:items-stretch ${
+                      uc.id === "operations-automation" ? "md:flex-row-reverse" : ""
                     }`}
                   >
-                    <CardTitle className="text-2xl sm:text-3xl lg:text-[32px] font-semibold tracking-tight text-white">
-                      {uc.title}
-                    </CardTitle>
-
-                    <p className="text-[16px] sm:text-[19px] leading-relaxed text-muted-foreground/90">
-                      {uc.description}
-                    </p>
-
-                    <div className="space-y-3">
-                      <ul className="space-y-2 text-sm sm:text-[17px] text-muted-foreground/90">
-                        {uc.items.map((item, index) => {
-                          const IconsForCase = useCaseItemIcons[uc.id] ?? []
-                          const Icon = IconsForCase[index] ?? CheckCircle2
-
-                          return (
-                            <li key={item} className="flex gap-2">
-                              <div className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-md border border-white/10 bg-white/5">
-                                <Icon className="h-3.5 w-3.5 text-primary" aria-hidden />
-                              </div>
-                              <span className="leading-snug">{item}</span>
-                            </li>
-                          )
-                        })}
-                      </ul>
+                    <div
+                      className={
+                        uc.id === "sales-engine" || uc.id === "autonomous-support" || uc.id === "operations-automation"
+                          ? "flex flex-1 md:max-w-[46%]"
+                          : "flex flex-1 flex-col items-center md:items-start md:max-w-[32%]"
+                      }
+                    >
+                      {uc.id === "sales-engine" ? (
+                        <div className="relative h-full w-full min-h-[260px] overflow-hidden rounded-3xl border border-white/15 bg-black/60 shadow-lg shadow-purple-500/25">
+                          <Image
+                            src="/usecase3.avif"
+                            alt="Automated Sales Engine use case"
+                            fill
+                            className="object-cover"
+                            sizes="256px"
+                          />
+                        </div>
+                      ) : uc.id === "autonomous-support" ? (
+                        <div className="relative h-full w-full min-h-[260px] overflow-hidden rounded-3xl border border-white/15 bg-black/60 shadow-lg shadow-purple-500/25">
+                          <Image
+                            src="/usecase1.avif"
+                            alt="Autonomous Customer Support use case"
+                            fill
+                            className="object-cover"
+                            sizes="256px"
+                          />
+                        </div>
+                      ) : uc.id === "operations-automation" ? (
+                        <div className="relative h-full w-full min-h-[260px] overflow-hidden rounded-3xl border border-white/15 bg-black/60 shadow-lg shadow-purple-500/25">
+                          <Image
+                            src="/usecase2.avif"
+                            alt="Smart Operations Automation use case"
+                            fill
+                            className="object-cover"
+                            sizes="256px"
+                          />
+                        </div>
+                      ) : (
+                        <CardDecorator />
+                      )}
                     </div>
-                  </div>
-                </CardHeader>
-              </Card>
-            )
-          })}
+
+                    <div
+                      className={`mt-4 flex-1 space-y-6 md:mt-0 md:max-w-[54%] py-9 sm:py-11 lg:py-14 pr-9 sm:pr-11 lg:pr-14 text-left ${
+                        uc.id === "operations-automation" ? "md:pl-8" : ""
+                      }`}
+                    >
+                      <CardTitle className="text-2xl sm:text-3xl lg:text-[32px] font-semibold tracking-tight text-white">
+                        {uc.title}
+                      </CardTitle>
+
+                      <p className="text-[16px] sm:text-[19px] leading-relaxed text-muted-foreground/90">
+                        {uc.description}
+                      </p>
+
+                      <div className="space-y-3">
+                        <ul className="space-y-2 text-sm sm:text-[17px] text-muted-foreground/90">
+                          {uc.items.map((item, index) => {
+                            const IconsForCase = useCaseItemIcons[uc.id] ?? []
+                            const Icon = IconsForCase[index] ?? CheckCircle2
+
+                            return (
+                              <li key={item} className="flex gap-2">
+                                <div className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-md border border-white/10 bg-white/5">
+                                  <Icon className="h-3.5 w-3.5 text-primary" aria-hidden />
+                                </div>
+                                <span className="leading-snug">{item}</span>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </CardHeader>
+                </Card>
+              </ScrollStackItem>
+            ))}
+          </ScrollStack>
         </div>
       </div>
     </section>

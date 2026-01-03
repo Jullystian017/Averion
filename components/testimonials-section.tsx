@@ -116,7 +116,7 @@ export function TestimonialsSection() {
         {/* Diagonal purple stripe behind the testimonial cards */}
         <div
           aria-hidden
-          className="pointer-events-none absolute left-[12%] right-[12%] top-[60%] h-12 -translate-y-1/2 transform -rotate-30 bg-[linear-gradient(110deg,rgba(76,29,149,0)_0%,rgba(124,58,237,0.9)_35%,rgba(236,72,153,0.85)_70%,transparent_100%)] opacity-60 blur-2xl"
+          className="pointer-events-none absolute left-[20%] right-[20%] top-[60%] h-12 -translate-y-1/2 transform -rotate-30 bg-[linear-gradient(110deg,rgba(76,29,149,0)_0%,rgba(124,58,237,0.85)_35%,rgba(147,51,234,0.9)_70%,rgba(168,85,247,0.78)_88%,transparent_100%)] opacity-60 blur-2xl"
         />
 
         <div className="mx-auto max-w-6xl px-6">

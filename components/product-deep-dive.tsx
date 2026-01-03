@@ -72,11 +72,11 @@ export function ProductDeepDiveSection() {
   }
 
   return (
-    <section id="deep-dive" className="relative overflow-hidden bg-linear-to-b from-background via-background/98 to-background/96 py-24 sm:py-28">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[520px] bg-[radial-gradient(circle_at_top,rgba(129,140,248,0.12)_0,transparent_70%)] blur-2xl" />
-      <div className="pointer-events-none absolute left-1/4 top-1/3 -z-10 h-96 w-96 rounded-full bg-purple-500/15 blur-[120px]" />
-      <div className="pointer-events-none absolute right-1/4 bottom-1/4 -z-10 h-80 w-80 rounded-full bg-violet-500/12 blur-[100px]" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/12 blur-[150px]" />
+    <section id="deep-dive" className="relative overflow-hidden bg-linear-to-b from-background via-background/98 to-background/96 pt-32 pb-32 sm:pt-40 sm:pb-36">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[520px] bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.2)_0,transparent_70%)] blur-2xl" />
+      <div className="pointer-events-none absolute left-1/4 top-1/3 -z-10 h-96 w-96 rounded-full bg-[rgba(139,92,246,0.24)] blur-[120px]" />
+      <div className="pointer-events-none absolute right-1/4 bottom-1/4 -z-10 h-80 w-80 rounded-full bg-[rgba(124,58,237,0.2)] blur-[100px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgba(109,40,217,0.22)] blur-[150px]" />
 
       {/* Purple radar background (semicircle) */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex justify-center">
@@ -88,9 +88,9 @@ export function ProductDeepDiveSection() {
               <div className="absolute inset-0 flex items-end justify-center pb-[4%]">
                 <div className="relative h-[78%] w-6 blur-[0.5px]">
                   {/* main beam shaft */}
-                  <div className="absolute inset-x-1/2 bottom-0 h-full w-1 -translate-x-1/2 rounded-full bg-linear-to-t from-purple-600/0 via-purple-400/85 to-purple-200/95" />
+                  <div className="absolute inset-x-1/2 bottom-0 h-full w-1 -translate-x-1/2 rounded-full bg-linear-to-t from-[#8B5CF6]/0 via-[#8B5CF6]/85 to-[#C084FC]" />
                   {/* tip highlight */}
-                  <div className="absolute inset-x-1/2 bottom-[2%] h-3 w-3 -translate-x-1/2 rounded-full bg-purple-300/80" />
+                  <div className="absolute inset-x-1/2 bottom-[2%] h-3 w-3 -translate-x-1/2 rounded-full bg-[#C084FC]/90" />
                 </div>
               </div>
             </div>
@@ -100,27 +100,27 @@ export function ProductDeepDiveSection() {
           <svg viewBox="0 0 1100 550" className="absolute inset-0 h-full w-full opacity-95 mix-blend-screen blur-[0.5px]">
             <defs>
               <radialGradient id="ring-gradient" cx="50%" cy="100%" r="50%">
-                <stop offset="0%" stopColor="#a855f7" stopOpacity="0.12" />
-                <stop offset="100%" stopColor="#a855f7" stopOpacity="0.06" />
+                <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.12" />
               </radialGradient>
             </defs>
             {/* soft semicircle fill */}
             <path d="M0,550 A550,550 0 0,1 1100,550 L 1100,550 L 0,550 Z" fill="url(#ring-gradient)" />
             {/* concentric rings with subtle gradient */}
-            <path d="M0,550 A550,550 0 0,1 1100,550" fill="none" stroke="#a855f7" strokeWidth="1.6" opacity="0.85" className="animate-pulse animation-duration-[4s]" />
-            <path d="M100,550 A450,450 0 0,1 1000,550" fill="none" stroke="#a855f7" strokeWidth="1.4" opacity="0.78" />
-            <path d="M190,550 A360,360 0 0,1 910,550" fill="none" stroke="#a855f7" strokeWidth="1.2" opacity="0.70" />
-            <path d="M260,550 A290,290 0 0,1 840,550" fill="none" stroke="#a855f7" strokeWidth="1.0" opacity="0.62" />
-            <path d="M330,550 A220,220 0 0,1 770,550" fill="none" stroke="#a855f7" strokeWidth="0.9" opacity="0.56" />
-            <path d="M400,550 A150,150 0 0,1 700,550" fill="none" stroke="#a855f7" strokeWidth="0.8" opacity="0.50" />
+            <path d="M0,550 A550,550 0 0,1 1100,550" fill="none" stroke="#8B5CF6" strokeWidth="1.6" opacity="0.98" className="animate-pulse animation-duration-[4s]" />
+            <path d="M100,550 A450,450 0 0,1 1000,550" fill="none" stroke="#8B5CF6" strokeWidth="1.4" opacity="0.9" />
+            <path d="M190,550 A360,360 0 0,1 910,550" fill="none" stroke="#8B5CF6" strokeWidth="1.2" opacity="0.84" />
+            <path d="M260,550 A290,290 0 0,1 840,550" fill="none" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.76" />
+            <path d="M330,550 A220,220 0 0,1 770,550" fill="none" stroke="#8B5CF6" strokeWidth="0.9" opacity="0.7" />
+            <path d="M400,550 A150,150 0 0,1 700,550" fill="none" stroke="#8B5CF6" strokeWidth="0.8" opacity="0.62" />
 
             {/* radial lines with stronger presence */}
-            <line x1="550" y1="550" x2="1030" y2="355" stroke="#8b5cf6" strokeWidth="1.0" opacity="0.72" />
-            <line x1="550" y1="550" x2="940" y2="185" stroke="#8b5cf6" strokeWidth="1.0" opacity="0.66" />
-            <line x1="550" y1="550" x2="760" y2="70" stroke="#8b5cf6" strokeWidth="1.0" opacity="0.60" />
-            <line x1="550" y1="550" x2="340" y2="70" stroke="#8b5cf6" strokeWidth="1.0" opacity="0.60" />
-            <line x1="550" y1="550" x2="160" y2="185" stroke="#8b5cf6" strokeWidth="1.0" opacity="0.66" />
-            <line x1="550" y1="550" x2="70" y2="355" stroke="#8b5cf6" strokeWidth="1.0" opacity="0.72" />
+            <line x1="550" y1="550" x2="1030" y2="355" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.86" />
+            <line x1="550" y1="550" x2="940" y2="185" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.8" />
+            <line x1="550" y1="550" x2="760" y2="70" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.74" />
+            <line x1="550" y1="550" x2="340" y2="70" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.74" />
+            <line x1="550" y1="550" x2="160" y2="185" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.8" />
+            <line x1="550" y1="550" x2="70" y2="355" stroke="#8B5CF6" strokeWidth="1.0" opacity="0.86" />
           </svg>
 
         </div>

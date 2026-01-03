@@ -66,7 +66,7 @@ export function HeroNavbar({ menuItems = defaultMenuItems }: HeroNavbarProps) {
       )}
     >
       <nav data-state={menuState && "active"} className="group">
-        <div className="mx-auto w-full max-w-6xl px-5 py-3 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-5 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between lg:hidden">
             <Link
               href="/"

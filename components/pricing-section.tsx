@@ -278,7 +278,7 @@ export function PricingSection() {
                   className={cn(
                     "group/gsb mb-6 w-full rounded-xl p-4 text-xl transition-all duration-300",
                     plan.popular
-                      ? "bg-linear-to-t from-purple-500 to-purple-600 border border-purple-500 text-white shadow-md shadow-purple-700 hover:shadow-[0_0_32px_rgba(148,89,242,0.6)] hover:scale-[1.03] active:scale-[0.98] hover:border-white/40"
+                      ? "bg-[linear-gradient(135deg,#C084FC_0%,#9333EA_45%,#6D28D9_100%)] border border-white/25 text-white shadow-[0_0_28px_rgba(148,89,242,0.42)] hover:shadow-[0_0_36px_rgba(168,85,247,0.6)] hover:scale-[1.03] active:scale-[0.98] hover:border-white/40"
                       : plan.buttonVariant === "outline"
                         ? "bg-gradient-to-t from-neutral-950 to-neutral-600 border border-neutral-800 text-white shadow-md shadow-neutral-900 hover:shadow-[0_0_28px_rgba(148,163,184,0.35)] hover:scale-[1.03] active:scale-[0.98] hover:border-white/30"
                         : "",
